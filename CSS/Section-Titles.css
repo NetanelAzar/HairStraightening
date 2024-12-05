@@ -1,0 +1,104 @@
+        /* Section Titles */
+        .section-title {
+            color: #ff6f61;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-top: 30px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* List items */
+        .list-group-item {
+            font-size: 1.1rem;
+            padding: 15px;
+            background: #fff;
+            border: none;
+            margin: 8px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .col-md-6 {
+        /* כל כרטיס יתפוס 100% מהמרווח על מסכים קטנים */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-lg-4 {
+        /* עבור מסכים קטנים, כרטיסים לא יהיו 33% רוחב */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+/*האלמנטים יהיו אחד ליד השני במכשירי מובייל */
+
+/*
+Section Titles
+.section-title {
+    color: #ff6f61;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* List items 
+.list-group-item {
+    font-size: 1.1rem;
+    padding: 15px;
+    background: #fff;
+    border: none;
+    margin: 8px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for mobile screens 
+@media (max-width: 767px) {
+    .row {
+        display: flex; /* שימוש ב-flexbox כדי להציג את הכרטיסים אחד ליד השני 
+        flex-wrap: wrap; /* מאפשר לצרף את הכרטיסים לשורות בעת הצורך 
+        justify-content: space-between; /* חלוקה אופטימלית של השטח 
+    }
+
+    .col-md-6, .col-lg-4 {
+        flex: 0 0 48%; /* כל כרטיס יתפוס 48% מהמרווח, כך יהיו שני כרטיסים בכל שורה 
+        max-width: 48%; /* הגבלה על רוחב הכרטיס 
+        margin-bottom: 1rem; /* מרווח בין הכרטיסים 
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* צמצום גודל הפונט בכרטיסים 
+    }
+
+    .card-text {
+        font-size: 1rem; /* צמצום גודל הפונט 
+    }
+
+    .card-body i {
+        font-size: 1.5rem; /* אייקון קטן יותר 
+    }
+
+    /* הפחתת גובה כרטיסים 
+    .card {
+        height: auto; /* גובה משתנה 
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* צמצום גודל הפונט בכותרת 
+    }
+}
+*/

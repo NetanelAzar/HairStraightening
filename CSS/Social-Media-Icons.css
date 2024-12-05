@@ -1,0 +1,63 @@
+/* עיצוב שורת האייקונים ייחודית */
+.custom-icon-bar {
+    position: fixed;
+    top: 40%;  /* הזזת האייקונים קצת יותר למעלה */
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000; /* שמור את האייקונים מעל לתוכן */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* יישור האייקונים במרכז */
+}
+
+.custom-icon-bar a {
+    display: flex; /* שים את האייקון ב-flexbox */
+    justify-content: center; /* יישור האייקון במרכז */
+    align-items: center; /* יישור האייקון במרכז */
+    padding: 12px; /* הקטנה של הפדינג */
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 18px; /* הקטנה של גודל האייקון */
+    width: 45px; /* אורך קבוע לכל אייקון */
+    height: 45px; /* גובה קבוע */
+    border-radius: 50%; /* צורת עיגול */
+    margin: 8px 0; /* רווח בין האייקונים */
+    text-decoration: none !important; /* הסרה של קו תחתון */
+}
+
+.custom-icon-bar a:hover {
+    background-color: #000;
+}
+
+/* צבעים מותאמים לכל אייקון */
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.instagram {
+   background: #E4405F;  /* צבע הרקע של אינסטגרם */
+   color: white;  /* צבע האייקון */
+}
+
+.tiktok {
+    background: black;
+    color: white;
+}
+
+/* התאמה לרזולוציות קטנות יותר (מובייל) */
+@media screen and (max-width: 768px) {
+    .custom-icon-bar a {
+        font-size: 16px; /* הקטנת הגודל של האייקונים */
+        width: 38px; /* גודל קטן יותר של האייקונים */
+        height: 38px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .custom-icon-bar a {
+        font-size: 14px; /* הקטנה נוספת במוביילים */
+        width: 30px;
+        height: 30px;
+    }
+}

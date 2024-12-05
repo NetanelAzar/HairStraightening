@@ -1,0 +1,10 @@
+        /* Special Offer Section */
+        .special-offer {
+            background-color: #ffecd1;
+            padding: 50px 0;
+            color: #b8412d;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
