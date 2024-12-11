@@ -36,7 +36,7 @@
 }
 
 .instagram {
-   background: #E4405F;  /* צבע הרקע של אינסטגרם */
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C); /* צבע הרקע של אינסטגרם */
    color: white;  /* צבע האייקון */
 }
 

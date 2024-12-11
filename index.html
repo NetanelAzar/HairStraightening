@@ -107,207 +107,153 @@
 
 
 
-
-
-
-<section class="halakli-hero">
-    <video autoplay muted loop playsinline class="background-video">
+<section class="hero">
+    <video autoplay muted loop playsinline class="hero__video">
         <source src="./video/Halakli_Movie (3) (video-converter.com).mp4" type="video/mp4">
     </video>
-    <div class="hero-overlay"></div>
     
-    <div class="container">
-        <div class="hero-content-centered">
-            <div class="brand-logo">
-                <img src="./pic/halak-li-logo-e1674065747680.png" alt="HALAKLI">
-                <div class="hebrew-text-small">בלי ניסיון • בלי פחד • רק אהבה ליופי • וידיים שמוכנות ללמוד</div>
-            </div>
-            
-            <div class="content-wrapper">
-                <div class="english-section">
-                    <div class="decorative-border">
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
-                        <div class="quote">
-                            <div class="quote-text first">TRANSFORM YOUR PASSION</div>
-                            <div class="quote-text second">INTO EXPERTISE</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="hero__overlay"></div>
+    
+    <div class="hero__content">
+        <div class="hero__logo">
+            <img src="./pic/halak-li-logo-e1674065747680.png" alt="HALAKLI">
+        </div>
+        
+        <div class="hero__text-content">
+            <h3 class="hero__tagline">בלי ניסיון • בלי פחד • רק אהבה ליופי • וידיים שמוכנות ללמוד</h3>
+            <h1 class="hero__title">קורס החלקות השיער שלנו ייקח אותך צעד צעד להפוך את החלום למקצוע!  </h1>
+            <p class="hero__description">בואי לגלות את הטכניקות המובילות , להתמקצע בתחום המבוקש, ולבנות קריירה זוהרת 
+                שתגרום לך להתאהב כל יום מחדש במה שאת עושה </p>
+            <div class="hero__quote">TRANSFORM YOUR PASSION INTO EXPERTISE</div>
         </div>
     </div>
 </section>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600&display=swap');
 
-.halakli-hero {
-    position: relative;
-    height: 100vh;
-    background: #000;
-    overflow: hidden;
-}
-
-.background-video {
+.hero__video {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 0.7;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
-.hero-overlay {
+.hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+
+.hero__overlay {
     position: absolute;
     inset: 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
 }
 
-.hero-content-centered {
+.hero__content {
     position: relative;
-    z-index: 3;
+    z-index: 2;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    gap: 4rem;
-}
 
-.brand-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.brand-logo img {
-    width: 400px;
-    filter: drop-shadow(0 15px 40px rgba(0,0,0,0.5));
-    animation: floatLogo 5s ease-in-out infinite;
-}
-
-.hebrew-text-small {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #fff;
-    margin-top: 1rem;
-    text-align: center;
-    animation: fadeInUp 1.5s ease-out;
-}
-
-.content-wrapper {
-    text-align: center;
-    padding: 2.5rem;
-    /*background: rgba(255, 255, 255, 0.03);
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);*/
-}
-
-.decorative-border {
-    position: relative;
     padding: 2rem;
 }
 
-.corner {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
+.hero__logo {
+    transform: translateY(-30px);
 }
 
-.top-left {
-    top: 0;
-    left: 0;
-    border-right: none;
-    border-bottom: none;
+.hero__logo img {
+    width: 220px;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+    animation: floatEffect 6s ease-in-out infinite;
 }
 
-.top-right {
-    top: 0;
-    right: 0;
-    border-left: none;
-    border-bottom: none;
+.hero__text-content {
+    text-align: center;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
 }
 
-.bottom-left {
-    bottom: 0;
-    left: 0;
-    border-right: none;
-    border-top: none;
+.hero__tagline {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
 }
 
-.bottom-right {
-    bottom: 0;
-    right: 0;
-    border-left: none;
-    border-top: none;
+.hero__title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
-.quote-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.9rem;
-    font-weight: 200;
-    letter-spacing: 8px;
-    line-height: 1.5;
-    background: linear-gradient(135deg, #ffffff, #d0d0d0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+.hero__description {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2rem;
 }
 
-.quote-text.first {
-    animation: slideInLeft 1.5s ease-out;
+.hero__quote {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #fff;
+    opacity: 0.8;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-.quote-text.second {
-    animation: slideInRight 1.5s ease-out;
-}
-
-@keyframes floatLogo {
+@keyframes floatEffect {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
-    .brand-logo img {
-        width: 250px;
+    .hero__logo img {
+        width: 180px;
     }
-
-    .hebrew-text-small {
+    
+    .hero__title {
+        font-size: 2.2rem;
+    }
+    
+    .hero__description {
         font-size: 1.2rem;
     }
-
-    .content-wrapper {
-        padding: 1.5rem;
-    }
-
-    .quote-text {
-        font-size: 1.2rem;
-        letter-spacing: 5px;
-    }
-
-    .corner {
-        width: 15px;
-        height: 15px;
+    
+    .hero__quote {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
     }
 }
 </style>
@@ -330,10 +276,432 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+<section class="halakli-hero">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="./video/Halakli_Movie (3) (video-converter.com).mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    
+    <div class="container">
+        <div class="hero-content-centered">
+            <div class="brand-logo">
+                <img src="./pic/halak-li-logo-e1674065747680.png" alt="HALAKLI">
+                <div class="hebrew-text-small">בלי ניסיון • בלי פחד • רק אהבה ליופי • וידיים שמוכנות ללמוד</div>
+            </div>
+            
+            <div class="content-wrapper">
+                <div class="hebrew-section">
+                    <p class="hebrew-main-text">קורס החלקות השיער שלנו ייקח אותך צעד צעד להפוך את החלום למקצוע!</p>
+                    <p class="hebrew-sub-text">בואי לגלות את הטכניקות המובילות, להתמקצע בתחום המבוקש, ולבנות קריירה זוהרת שתגרום לך להתאהב כל יום מחדש במה שאת עושה.</p>
+                </div>
+                <div class="english-section">
+                    <div class="decorative-border">
+                        <div class="corner top-left"></div>
+                        <div class="corner top-right"></div>
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                        <div class="quote">
+                            <div class="quote-text first">TRANSFORM YOUR PASSION</div>
+                            <div class="quote-text second">INTO EXPERTISE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Montserrat:wght@200;300;400&display=swap');
+
+    .halakli-hero {
+        position: relative;
+        height: 100vh;
+        background: #000;
+        overflow: hidden;
+    }
+    
+    .background-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+    }
+    
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+    }
+    
+    .hero-content-centered {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 1.5rem;
+    }
+    
+    .brand-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .brand-logo img {
+        width: 400px;
+        filter: drop-shadow(0 15px 40px rgba(0,0,0,0.5));
+        animation: floatLogo 5s ease-in-out infinite 1s;
+    }
+    
+    .hebrew-text-small {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #fff;
+        margin-top: 1rem;
+        text-align: center;
+        animation: fadeInUp 1.5s ease-out 0.3s;
+    }
+    
+    .content-wrapper {
+        text-align: center;
+        padding: 2.5rem;
+    }
+    
+    .hebrew-section {
+        font-family: 'Rubik', sans-serif;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+        transform: translateX(-100%);
+        opacity: 0;
+        animation: slideInContent 1s forwards 0.5s;
+    }
+    
+    .decorative-border {
+        position: relative;
+        padding: 2rem;
+    }
+    
+    .corner {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .top-left {
+        top: 0;
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+    }
+    
+    .top-right {
+        top: 0;
+        right: 0;
+        border-left: none;
+        border-bottom: none;
+    }
+    
+    .bottom-left {
+        bottom: 0;
+        left: 0;
+        border-right: none;
+        border-top: none;
+    }
+    
+    .bottom-right {
+        bottom: 0;
+        right: 0;
+        border-left: none;
+        border-top: none;
+    }
+    
+    .quote-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.9rem;
+        font-weight: 200;
+        letter-spacing: 8px;
+        line-height: 1.5;
+        background: linear-gradient(135deg, #ffffff, #d0d0d0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+    }
+    
+    .quote-text.first {
+        animation: slideInLeft 1.5s ease-out 1s;
+    }
+    
+    .quote-text.second {
+        animation: slideInRight 1.5s ease-out 1.5s;
+    }
+    
+    @keyframes floatLogo {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes slideInContent {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @media (max-width: 768px) {
+        .brand-logo img {
+            width: 250px;
+        }
+    
+        .hebrew-text-small {
+            font-size: 1.2rem;
+        }
+    
+        .content-wrapper {
+            padding: 1.5rem;
+        }
+    
+        .quote-text {
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+        }
+    
+        .corner {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    </style>
+
+<style>
+.content-wrapper {
+    position: relative;
+    padding: 2rem;
+}
+
+.hebrew-section {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.hebrew-main-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.hebrew-sub-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hebrew-section::before,
+.hebrew-section::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d4af37;
+}
+
+.hebrew-section::before {
+    top: 15px;
+    right: 15px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.hebrew-section::after {
+    bottom: 15px;
+    left: 15px;
+    border-right: none;
+    border-top: none;
+}
+
+@media (max-width: 768px) {
+    .hebrew-section {
+        padding: 1.5rem;
+    }
+    
+    .hebrew-main-text {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    .hebrew-sub-text {
+        font-size: 1.1rem;
+        max-width: 95%;
+    }
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 <!-- 2 -->
 <!--TEXT-->
-<section class="py-5" style="border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); background-image: url('../5234772.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+<section class="py-5" style="    background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.6) 100%);
+backdrop-filter: blur(5px);
+border-radius: 15px;
+padding: 20px;
+background-image: linear-gradient(30deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6),
+linear-gradient(150deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6),
+linear-gradient(30deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6),
+linear-gradient(150deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6);
+background-size: 80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-attachment: fixed;">
+
+
+
+
+<br>
+
+
+    
+    <!-- הוספת האייקון כקובץ  -->
+<img src="./pic/hair-straightener-svgrepo-com.png" alt="Hair Straightener" width="100" height="100" class="straightener">
+    <div class="container text-center" style="background-color: rgba(255, 255, 255, 0.651); border-radius: 15px; padding: 20px;">
+        
+        <h2 class="section-title mb-4" style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #343a40; display: inline-block; position: relative; padding-bottom: 10px;">
+            הידע שלנו ההצלחה שלך!
+            <span class="line-animation" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, #343a40 0%, #f8f9fa 50%, #343a40 100%);"></span>
+        </h2>
+
+        <p style="font-size: 1.2rem; font-weight: 400; color: #020303; max-width: 800px; margin: 20px auto;">
+            מחפשת מקצוע חדש או הכנסה נוספת? הגעת למקום הנכון!
+            <br>הצטרפי לאקדמיה של חלקלי – החלקות שיער, והתחילי דרך חדשה ומרגשת! אנו מציעים לך את הכלים, הידע וההדרכה שתזדקקי להם כדי להצליח בעסק שלך ולהיות בעלת מקצוע עצמאית ומבוקשת.
+            <br>במהלך הלימודים תקבלי <b>רמה מקצועית גבוהה, יחס אישי וליווי צמוד</b>, כדי להבטיח לך את ההצלחה בכל צעד. אנחנו כאן כדי להנחות אותך ולהוביל אותך למקום שבו תוכלי להגשים את החלום ולבנות קריירה מצליחה בתחום החלקות השיער.
+        </p>
+
+
+
+ <!-- גלריית וידאו Swiper -->
+ <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- סרטון 1 -->
+      <div class="swiper-slide">
+        <div class="video-card">
+          <video autoplay loop muted playsinline>
+            <source
+              src="./video/Video with a client.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+      <!-- סרטון 2 -->
+      <div class="swiper-slide">
+        <div class="video-card">
+          <video autoplay loop muted playsinline>
+            <source
+              src="../video-output-92A142B6-3FC8-4C65-BC07-3A7E2DA3F05D.mov"
+            />
+          </video>
+        </div>
+      </div>
+      <!-- סרטון 3 -->
+      <div class="swiper-slide">
+        <div class="video-card">
+          <video autoplay loop muted playsinline>
+            <source
+              src="../video-output-572167B3-0412-441D-88B1-F632EABA9C4C.mov"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+      <!-- סרטון 4 -->
+      <div class="swiper-slide">
+        <div class="video-card">
+          <video autoplay loop muted playsinline>
+            <source
+              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+    </div>
+
+
+
+
+
+
 
 
 
@@ -382,91 +750,6 @@ z-index:-1;
         </div>
     </form>
     </div>
-
-
-
-
-<br>
-
-
-    
-    <!-- הוספת האייקון כקובץ  -->
-<img src="./pic/hair-straightener-svgrepo-com.png" alt="Hair Straightener" width="100" height="100" class="straightener">
-    <div class="container text-center" style="background-color: rgba(255, 255, 255, 0.651); border-radius: 15px; padding: 20px;">
-        
-        <h2 class="section-title mb-4" style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #343a40; display: inline-block; position: relative; padding-bottom: 10px;">
-            הידע שלנו ההצלחה שלך!
-            <span class="line-animation" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, #343a40 0%, #f8f9fa 50%, #343a40 100%);"></span>
-        </h2>
-
-        <p style="font-size: 1.2rem; font-weight: 400; color: #020303; max-width: 800px; margin: 20px auto;">
-            מחפשת מקצוע חדש או הכנסה נוספת? הגעת למקום הנכון!
-            <br>הצטרפי לאקדמיה של חלקלי – החלקות שיער, והתחילי דרך חדשה ומרגשת! אנו מציעים לך את הכלים, הידע וההדרכה שתזדקקי להם כדי להצליח בעסק שלך ולהיות בעלת מקצוע עצמאית ומבוקשת.
-            <br>במהלך הלימודים תקבלי <b>רמה מקצועית גבוהה, יחס אישי וליווי צמוד</b>, כדי להבטיח לך את ההצלחה בכל צעד. אנחנו כאן כדי להנחות אותך ולהוביל אותך למקום שבו תוכלי להגשים את החלום ולבנות קריירה מצליחה בתחום החלקות השיער.
-        </p>
-
-
-
- <!-- גלריית וידאו Swiper -->
- <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <!-- סרטון 1 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/QOrdxbkGTGSjmUOD1WfD_458421666_3713460208908144_6622768056561484957_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 2 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/oVgH1HapTciNyVS9huSD_454254437_818307740443431_5245233936550413740_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 3 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 4 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-
-
-
-    </div>
-
-
-
-
-
-
 
 
 
@@ -662,9 +945,92 @@ z-index:-1;
                             aria-labelledby="faq1"
                             data-bs-parent="#faqAccordion"
                         >
-                            <div class="accordion-body">
-                                במהלך הקורס תלמדו שיטות מתקדמות להחלקת שיער, כולל התאמת חומרים וטכניקות עבודה מקצועיות.
-                            </div>
+                        <div class="accordion-body">
+                            במהלך הקורס תלמדו תוכנית לימודים מקיפה הכוללת:
+                            <ul class="curriculum-list">
+                                <li>
+                                    <i class="fas fa-users text-primary"></i>
+                                    <strong>אבחון והכרת סוגי השיער:</strong> 
+                                    הכרת סוגי השיער וניתוחם לעבודה מתאימה
+                                </li>
+                                <li>
+                                    <i class="fas fa-palette text-primary"></i>
+                                    <strong>חלוקה לאזורים:</strong>
+                                    טכניקות לחלוקת שיער לאזורים לעבודה יעילה
+                                </li>
+                                <li>
+                                    <i class="fas fa-cut text-primary"></i>
+                                    <strong>עבודה עם סוגי שיער שונים:</strong>
+                                    טיפול והתאמה של שיטות עבור סוגי שיער מגוונים
+                                </li>
+                                <li>
+                                    <i class="fas fa-flask text-primary"></i>
+                                    <strong>הכרת סוגי החומרים להחלקות:</strong>
+                                    מידע על החומרים השונים והתאמתם להחלקות שונות
+                                </li>
+                                <li>
+                                    <i class="fas fa-flask text-primary"></i>
+                                    <strong>אבחון והכרת החומרים:</strong>
+                                    תיאום ציפיות והתמקדות עם מצבים שונים
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle text-primary"></i>
+                                    <strong>תיאום ציפיות:</strong>
+                                    הבנת הציפיות והמצבים השונים והכנה לעבודה מיטבית
+                                </li>
+                                <li>
+                                    <i class="fas fa-tools text-primary"></i>
+                                    <strong>שלבי עבודה מעשיים:</strong>
+                                    ביצוע כל שלב בהחלקה באופן יסודי לשמירה על איכות
+                                </li>
+                                <li>
+                                    <i class="fas fa-shower text-primary"></i>
+                                    <strong>שימור החלקות:</strong>
+                                    טיפים לשימור ההחלקה ותחזוקה נכונה
+                                </li>
+                                <li>
+                                    <i class="fas fa-certificate text-primary"></i>
+                                    <strong>תעודת הסמכה:</strong>
+                                    קבלת תעודה מקצועית בסיום הקורס
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <style>
+                        .curriculum-list {
+                            list-style: none;
+                            padding: 0;
+                            margin: 1rem 0;
+                        }
+                        
+                        .curriculum-list li {
+                            display: flex;
+                            align-items: center;
+                            margin: 0.8rem 0;
+                            padding: 0.8rem;
+                            background: #f8f9fa;
+                            border-radius: 8px;
+                            transition: transform 0.2s ease;
+                        }
+                        
+                        .curriculum-list li:hover {
+                            transform: translateX(-5px);
+                            background: #f0f0f0;
+                        }
+                        
+                        .curriculum-list i {
+                            margin-left: 0.8rem;
+                            color: #0056b3;
+                            font-size: 1.2rem;
+                        }
+                        
+                        .curriculum-list strong {
+                            color: #0056b3;
+                            margin-left: 0.5rem;
+                        }
+                        </style>
+                        
+                        
                         </div>
                     </div>
 
@@ -958,195 +1324,210 @@ z-index:-1;
 
 
 
-<section class="contact-form-section">
-    <div class="form-wrapper">
-        <div class="text-content">
-            <h1 class="main-heading">מחפשת מקצוע חדש או הכנסה נוספת? הגעת למקום הנכון!</h1>
-            
-            <div class="text-container">
 
-                <p class="description">
-                    הצטרפי לאקדמיה של חלקלי – החלקות שיער, והתחילי דרך חדשה ומרגשת! 
-                    <span class="highlight">אנו מציעים לך את הכלים, הידע וההדרכה</span> 
-                    שתזדקקי להם כדי להצליח בעסק שלך ולהיות בעלת מקצוע עצמאית ומבוקשת
-                </p>
-            </div>
+
+
+
+
+<!--Social connect-->
+<section class="social-connect-section">
+    <div class="decorative-circles left">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="connect-wrapper">
+        <div class="text-content">
+            <h1 class="main-heading">הצטרפו למשפחת חלקלי</h1>
+            <p class="description">
+                תוכן מקצועי | טיפים והדרכות | מבצעים בלעדיים
+                <span class="highlight">45K+</span> עוקבים כבר נהנים
+            </p>
         </div>
 
-        <form action="https://formspree.io/f/xnnqvzjn" method="POST" class="inline-form">
-            <div class="inputs-row">
-                <input type="text" name="fullName" placeholder="שם מלא" required class="form-input">
-                <input type="email" name="email" placeholder="אימייל" required class="form-input">
-                <input type="tel" name="phone" placeholder="טלפון" required class="form-input">
-                <button type="submit" class="form-button">שליחה</button>
-            </div>
-        </form>
+        <div class="social-links">
+            <a href="https://www.facebook.com/halakli/?locale=he_IL" class="social-link facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+                <div class="link-content">
+                    <span>Facebook</span>
+                    <small>15K+ עוקבים</small>
+                </div>
+            </a>
+
+            <a href="https://www.instagram.com/halakli_/" class="social-link instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <div class="link-content">
+                    <span>Instagram</span>
+                    <small>20K+ עוקבים</small>
+                </div>
+            </a>
+
+            <a href="https://www.tiktok.com/@halakli" class="social-link tiktok" target="_blank">
+                <i class="fab fa-tiktok"></i>
+                <div class="link-content">
+                    <span>TikTok</span>
+                    <small>10K+ צפיות</small>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="decorative-circles right">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
     </div>
 </section>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;700;900&display=swap');
-
-.contact-form-section {
-    background: linear-gradient(165deg, #ffffff, #f5f5f5);
-    padding: 4rem 2rem;
+.social-connect-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 3rem 1rem;
     position: relative;
-    overflow: hidden;
-    font-family: 'Rubik', sans-serif;
-    max-width: 100%;
-    margin: 30px auto;
-    border-radius: 5px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.form-wrapper {
-    max-width: 1200px;
-    width: 90%;
+.connect-wrapper {
+    max-width: 800px;
     margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.main-heading {
+    color: #2d3436;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.description {
+    color: #636e72;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #0984e3;
+    font-weight: 700;
+    margin: 0 0.3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    color: #2d3436;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-link i {
+    font-size: 1.5rem;
+}
+
+.link-content {
+    text-align: right;
+}
+
+.link-content span {
+    display: block;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.link-content small {
+    color: #636e72;
+    font-size: 0.8rem;
+}
+
+.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+
+.instagram:hover {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C);
+    color: white;
+}
+
+.tiktok:hover {
+    background: #000;
+    color: white;
+    border: 1px solid #00f2fe;
+}
+
+.social-link:hover .link-content span,
+.social-link:hover .link-content small {
+    color: white;
+}
+
+.decorative-circles {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 3rem;
-    border-radius: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
+    gap: 2rem;
+    opacity: 0.2;
 }
 
-.form-wrapper::before,
-.form-wrapper::after {
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    border-top-left-radius: 40%;
-    border-top-right-radius: 45%;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 40%;
-    z-index: -1;
+.decorative-circles.left { left: 5%; }
+.decorative-circles.right { right: 5%; }
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #74b9ff, #0984e3);
+    animation: pulse 3s infinite alternate;
 }
 
-.form-wrapper::before {
-    left: 40%;
-    bottom: -130%;
-    background-color: rgba(0, 0, 0, 0.05);
-    animation: wawes 6s infinite linear;
+.decorative-circles.right .circle {
+    background: linear-gradient(45deg, #0984e3, #74b9ff);
 }
 
-.form-wrapper::after {
-    left: 35%;
-    bottom: -125%;
-    background-color: rgba(0, 0, 0, 0.03);
-    animation: wawes 7s infinite;
-}
+.circle:nth-child(2) { animation-delay: 1s; }
+.circle:nth-child(3) { animation-delay: 2s; }
 
-.form-title {
-    color: #000000;
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    font-family: 'Heebo', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.inline-form {
-    width: 100%;
-}
-
-.inputs-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.form-input {
-    padding: 0.7rem 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #000000;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
-    font-family: 'Heebo', sans-serif;
-    font-weight: 400;
-}
-
-.form-input:focus {
-    border-color: #ff6f61;
-    box-shadow: 0 0 20px rgba(255,111,97,0.2);
-    transform: translateY(-2px);
-    outline: none;
-    background: #ffffff;
-}
-
-.form-input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 300;
-    letter-spacing: 0.5px;
-}
-
-.form-button {
-    background: linear-gradient(45deg, #ff6f61, #ff8a82);
-    color: white;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 15px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255,111,97,0.2);
-    cursor: pointer;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-}
-
-.form-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255,111,97,0.3);
-    background: linear-gradient(45deg, #ff8a82, #ff6f61);
-}
-
-@keyframes wawes {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+@keyframes pulse {
+    from { transform: scale(1); opacity: 0.3; }
+    to { transform: scale(1.2); opacity: 0.6; }
 }
 
 @media (max-width: 1200px) {
-    .contact-form-section {
-        margin: 30px 20px;
-    }
-    
-    .form-wrapper {
-        width: 95%;
-    }
+    .decorative-circles { display: none; }
 }
 
 @media (max-width: 768px) {
-    .contact-form-section {
-        padding: 2rem 1rem;
+    .social-links {
+        flex-direction: column;
     }
     
-    .form-wrapper {
-        padding: 2rem 1rem;
+    .social-link {
         width: 100%;
-    }
-    
-    .inputs-row {
-        grid-template-columns: 1fr;
+        justify-content: center;
     }
 }
-
-
 </style>
+
+
+
+
 
 
 
@@ -1206,7 +1587,7 @@ z-index:-1;
                 </p>
 
                 <div class="mt-4">
-                    <iframe width="100%" height="315" src="../Halakli_Movie (3) (video-converter.com).mp4" frameborder="0" type="video/mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);"></iframe>
+                    <iframe width="100%" height="315" src="./video/Halakli_Movie (3) (video-converter.com).mp4" frameborder="0" type="video/mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);"></iframe>
                 </div>
             </div>
         </div>
@@ -1368,1529 +1749,6 @@ p .con ul li:before {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="academy-showcase">
-    <div class="showcase-container">
-        <!-- Promotion Badge -->
-        <div class="promo-badge">
-            <div class="badge-content">
-                <span>מבצע מיוחד</span>
-                <strong>10%</strong>
-                <span>הנחה</span>
-            </div>
-        </div>
-
-        <!-- Main Content Card -->
-        <div class="content-card">
-            <div class="content-side">
-                <h1>קורס החלקות שיער מקצועי</h1>
-                <p class="subtitle">פתחי קריירה מצליחה בתחום היופי</p>
-                
-                <div class="features-list">
-                    <div class="feature">
-                        <span class="icon">✨</span>
-                        <span>הכשרה מקצועית ברמה גבוהה</span>
-                    </div>
-                    <div class="feature">
-                        <span class="icon">💰</span>
-                        <span>פוטנציאל הכנסה גבוה</span>
-                    </div>
-                    <div class="feature">
-                        <span class="icon">🤝</span>
-                        <span>ליווי אישי להצלחה מובטחת</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Registration Form -->
-            <div class="form-side">
-                <form class="register-form">
-                    <h3>הרשמה לקורס</h3>
-                    <input type="text" placeholder="שם מלא" required>
-                    <input type="tel" placeholder="טלפון" required>
-                    <input type="email" placeholder="אימייל" required>
-                    <button type="submit">להצטרפות לקורס ➜</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<style>.academy-showcase {
-    background: linear-gradient(135deg, #f5f7fa 0%, #f8f9fa 100%);
-    padding: 60px 20px;
-    font-family: 'Assistant', sans-serif;
-    direction: rtl;
-}
-
-.showcase-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.promo-badge {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(45deg, #ff6b8b, #ffd3a5);
-    border-radius: 50%;
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 107, 139, 0.2);
-}
-
-.badge-content {
-    text-align: center;
-    color: white;
-    font-size: 0.9rem;
-}
-
-.badge-content strong {
-    display: block;
-    font-size: 2rem;
-    line-height: 1;
-    margin: 5px 0;
-}
-
-.content-card {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    display: flex;
-    overflow: hidden;
-}
-
-.content-side {
-    flex: 1;
-    padding: 40px;
-}
-
-.content-side h1 {
-    font-size: 2.5rem;
-    color: #2d1f3d;
-    margin-bottom: 15px;
-}
-
-.subtitle {
-    color: #666;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.features-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.feature {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-    color: #444;
-}
-
-.feature .icon {
-    font-size: 1.3rem;
-}
-
-.form-side {
-    width: 350px;
-    background: #f8f9fa;
-    padding: 40px;
-}
-
-.register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.register-form h3 {
-    color: #2d1f3d;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.register-form input {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.register-form button {
-    background: linear-gradient(45deg, #ff6b8b, #ffd3a5);
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.register-form button:hover {
-    transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-    .content-card {
-        flex-direction: column;
-    }
-    
-    .form-side {
-        width: 100%;
-    }
-    
-    .promo-badge {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin: 0 auto 20px;
-    }
-}</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="premium-academy">
-    <div class="hero-banner">
-        <div class="offer-container">
-            <div class="offer-content">
-                <div class="offer-badge">
-                    <span class="badge-text">מבצע מיוחד</span>
-                    <div class="discount-amount">10%</div>
-                    <span class="badge-subtext">הנחה</span>
-                </div>
-                <h2 class="offer-title">הצטרפי עכשיו והתחילי את המסע שלך להצלחה</h2>
-                <p class="offer-subtitle">הרשמה מוקדמת לקורס הקרוב - מקומות אחרונים!</p>
-            </div>
-
-            <form class="premium-form">
-                <div class="form-container">
-                    <input type="text" placeholder="✍️ שם מלא" required>
-                    <input type="email" placeholder="📧 אימייל" required>
-                    <input type="tel" placeholder="📱 טלפון" required>
-                    <button type="submit" class="cta-button">
-                        <span>להצטרפות לקורס</span>
-                        <i class="arrow-icon">→</i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="main-section">
-        <div class="brand-story">
-            <div class="icon-container">
-                <img src="./pic/hair-straightener-svgrepo-com.png" alt="Hair Straightener" class="brand-icon">
-                <div class="icon-glow"></div>
-            </div>
-
-            <h1 class="brand-title">הידע שלנו ההצלחה שלך!</h1>
-            
-            <div class="brand-message">
-                <div class="message-highlight">
-                    <span class="spark-icon">✨</span>
-                    <p>מחפשת מקצוע חדש או הכנסה נוספת? הגעת למקום הנכון!</p>
-                </div>
-                
-                <div class="message-box">
-                    <p class="message-main">הצטרפי לאקדמיה של חלקלי – החלקות שיער, והתחילי דרך חדשה ומרגשת! אנו מציעים לך את הכלים, הידע וההדרכה שתזדקקי להם כדי להצליח בעסק שלך ולהיות בעלת מקצוע עצמאית ומבוקשת.</p>
-                    <div class="message-features">
-                        <span class="feature-item">✓ רמה מקצועית גבוהה</span>
-                        <span class="feature-item">✓ יחס אישי</span>
-                        <span class="feature-item">✓ ליווי צמוד</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- גלריית וידאו Swiper -->
- <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <!-- סרטון 1 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/QOrdxbkGTGSjmUOD1WfD_458421666_3713460208908144_6622768056561484957_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 2 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/oVgH1HapTciNyVS9huSD_454254437_818307740443431_5245233936550413740_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 3 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 4 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-    </div>
-</section>
-<style>
-    .premium-academy {
-    background: linear-gradient(135deg, #faf8ff 0%, #fff5f7 100%);
-    font-family: 'Heebo', sans-serif;
-}
-
-.hero-banner {
-    background: linear-gradient(45deg, #1a0f3c 0%, #314647 100%);
-    padding: 60px 20px;
-    color: white;
-}
-
-.offer-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.offer-badge {
-    display: inline-block;
-    background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-    padding: 20px 40px;
-    border-radius: 50px;
-    transform: rotate(-3deg);
-    margin-bottom: 30px;
-    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
-}
-
-.discount-amount {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1;
-    margin: 10px 0;
-}
-
-.offer-title {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    background: linear-gradient(45deg, #fff, #ffd93d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.premium-form {
-    margin-top: 40px;
-}
-
-.form-container {
-    display: flex;
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.form-container input {
-    flex: 1;
-    min-width: 200px;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1.1rem;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-container input:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-    outline: none;
-}
-
-.cta-button {
-    background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-    border: none;
-    padding: 15px 40px;
-    border-radius: 12px;
-    color: #1a0f3c;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cta-button:hover {
-    transform: translateY(-3px) scale(1.02);
-}
-
-.main-section {
-    padding: 80px 20px;
-}
-
-.brand-story {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.icon-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 40px;
-}
-
-.brand-icon {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 2;
-    animation: float 3s ease-in-out infinite;
-}
-
-.icon-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.brand-title {
-    font-size: 3.5rem;
-    background: linear-gradient(45deg, #1a0f3c, #ff6b6b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 50px;
-}
-
-.message-highlight {
-    font-size: 1.8rem;
-    color: #ff6b6b;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.message-box {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-}
-
-.message-features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.feature-item {
-    background: rgba(255, 107, 107, 0.1);
-    padding: 10px 20px;
-    border-radius: 30px;
-    color: #ff6b6b;
-    font-weight: 600;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-@keyframes pulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.1); }
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 3 -->
-<section class="luxury-academy-hero">
-    <div class="hero-background">
-        <div class="animated-gradient"></div>
-        <div class="floating-particles"></div>
-        
-        <div class="hero-content">
-            <div class="premium-offer-badge">
-                <div class="badge-inner">
-                    <div class="shine-effect"></div>
-                    <span class="offer-label">הצעה מיוחדת</span>
-                    <div class="offer-amount">10%</div>
-                    <span class="offer-type">הנחה</span>
-                </div>
-            </div>
-
-            <div class="hero-text-container">
-                <h1 class="hero-title">
-                    <span class="title-highlight">התחילי את המסע שלך</span>
-                    <span class="title-main">להצלחה מקצועית</span>
-                </h1>
-                <p class="hero-subtitle">הרשמה מוקדמת לקורס הקרוב - מקומות אחרונים!</p>
-            </div>
-
-            <form class="luxury-contact-form">
-                <div class="form-fields">
-                    <div class="input-wrapper">
-                        <span class="input-icon">👤</span>
-                        <input type="text" placeholder="שם מלא" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <span class="input-icon">✉️</span>
-                        <input type="email" placeholder="אימייל" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <span class="input-icon">📱</span>
-                        <input type="tel" placeholder="טלפון" required>
-                    </div>
-                    <button type="submit" class="premium-submit-btn">
-                        <span class="btn-text">להצטרפות לקורס</span>
-                        <span class="btn-icon">⟶</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-<style>
-    .luxury-academy-hero {
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-background {
-    background: linear-gradient(135deg, #0a0520 0%, #1a1035 100%);
-    position: relative;
-    padding: 80px 20px;
-}
-
-.animated-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.15), transparent 60%);
-    animation: gradientMove 15s ease-in-out infinite;
-}
-
-.floating-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 2%),
-        radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 2%),
-        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 2%);
-    animation: particlesFloat 20s linear infinite;
-}
-
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.premium-offer-badge {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 40px;
-    position: relative;
-}
-
-.badge-inner {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #FFD700, #FFA500);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-    animation: badgePulse 2s ease-in-out infinite;
-}
-
-.shine-effect {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        45deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.4) 50%,
-        transparent 100%
-    );
-    animation: shine 3s infinite;
-}
-
-.offer-amount {
-    font-size: 4rem;
-    font-weight: 800;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.hero-text-container {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-.title-highlight {
-    display: block;
-    color: #FFD700;
-    font-weight: 300;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.title-main {
-    display: block;
-    background: linear-gradient(45deg, #fff, #FFD700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-}
-
-.luxury-contact-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 40px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.form-fields {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.input-icon {
-    position: absolute;
-    left: 15px;
-    font-size: 1.2rem;
-}
-
-.luxury-contact-form input {
-    width: 100%;
-    padding: 15px 45px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    color: #fff;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-}
-
-.luxury-contact-form input:focus {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #FFD700;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-}
-
-.premium-submit-btn {
-    grid-column: 1 / -1;
-    background: linear-gradient(45deg, #FFD700, #FFA500);
-    color: #000;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-
-.premium-submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-}
-
-@keyframes gradientMove {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-30px, -30px); }
-}
-
-@keyframes particlesFloat {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100px); }
-}
-
-@keyframes badgePulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-@keyframes shine {
-    0% { transform: translateX(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) rotate(45deg); }
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 1 -->
-<section class="luxury-academy-section">
-    <!-- Promotional Banner -->
-    <div class="promo-container">
-        <div class="promo-content">
-            <h3 class="promo-title">הצטרפי עכשיו והשיגי <span class="discount-badge">10% הנחה</span></h3>
-            <p class="promo-subtitle">לנרשמות לקורס הקרוב</p>
-            
-            <form class="contact-form">
-                <div class="form-grid">
-                    <input type="text" placeholder="שם מלא" required>
-                    <input type="email" placeholder="אימייל" required>
-                    <input type="tel" placeholder="טלפון" required>
-                    <button type="submit">שליחה</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-
-
-        <div class="content-box">
-            <img src="./pic/hair-straightener-svgrepo-com.png" alt="Hair Straightener" width="100" height="100" class="straightener">
-            <h1 class="main-title">הידע שלנו ההצלחה שלך!</h1>
-            
-            <div class="text-content">
-                <p class="highlight">מחפשת מקצוע חדש או הכנסה נוספת? הגעת למקום הנכון!</p>
-                <p>הצטרפי לאקדמיה של חלקלי – החלקות שיער, והתחילי דרך חדשה ומרגשת! אנו מציעים לך את הכלים, הידע וההדרכה שתזדקקי להם כדי להצליח בעסק שלך ולהיות בעלת מקצוע עצמאית ומבוקשת.</p>
-                <p>במהלך הלימודים תקבלי <span class="emphasis">רמה מקצועית גבוהה, יחס אישי וליווי צמוד</span>, כדי להבטיח לך את ההצלחה בכל צעד.</p>
-            </div>
-        </div>
-
-
- <!-- גלריית וידאו Swiper -->
- <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <!-- סרטון 1 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/QOrdxbkGTGSjmUOD1WfD_458421666_3713460208908144_6622768056561484957_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 2 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/oVgH1HapTciNyVS9huSD_454254437_818307740443431_5245233936550413740_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 3 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 4 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-    </div>
-</section>
-<style>
-    .luxury-academy-section {
-    background-image: linear-gradient(135deg, #f6f3ff 0%, #fff 100%);
-    padding: 60px 20px;
-    font-family: 'Heebo', sans-serif;
-}
-
-/* Promo Section */
-.promo-container {
-    background: linear-gradient(120deg, #fff5f7 0%, #fff 100%);
-    max-width: 800px;
-    margin: 0 auto 60px;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 2px dashed #ff758c;
-}
-
-.promo-title {
-    font-size: 2rem;
-    color: #2d3436;
-    margin-bottom: 15px;
-}
-
-.discount-badge {
-    background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 25px;
-    font-size: 1.8rem;
-    display: inline-block;
-    transform: rotate(-2deg);
-    box-shadow: 3px 3px 10px rgba(255, 117, 140, 0.3);
-}
-
-/* Form Styles */
-.contact-form {
-    margin-top: 30px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.form-grid input {
-    padding: 12px 20px;
-    border: 2px solid #eee;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.form-grid input:focus {
-    border-color: #ff758c;
-    box-shadow: 0 0 0 3px rgba(255, 117, 140, 0.2);
-    outline: none;
-}
-
-.form-grid button {
-    background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.form-grid button:hover {
-    transform: translateY(-2px);
-}
-
-/* Main Content */
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.floating-icon {
-    width: 120px;
-    height: 120px;
-    animation: float 3s ease-in-out infinite;
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-.content-box {
-    background: white;
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-    margin: 30px auto;
-}
-
-.main-title {
-    font-size: 3rem;
-    color: #2d3436;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.main-title::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
-    margin: 15px auto;
-    border-radius: 2px;
-}
-
-.text-content {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #2d3436;
-    text-align: right;
-}
-
-.highlight {
-    font-size: 1.4rem;
-    color: #ff758c;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.emphasis {
-    background: linear-gradient(120deg, rgba(255, 117, 140, 0.2) 0%, rgba(255, 126, 179, 0.2) 100%);
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-weight: 700;
-}
-
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 2 -->
-<!--TEXT-->
-<section class="py-5" style="border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); background-image: url('../5234772.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
-
-
-
-    <div class="dotted-border">
-        <style>
-        .dotted-border {
-            border: 3px dotted #cb1829; /* גבול עם נקודות בצבע אדום */
-            padding: 20px; /* רווח פנימי */
-            border-radius: 15px; /* פינות מעוגלות */
-            background-color: #fdfdfd; /* צבע רקע בהיר */
-            max-width: 750px; /* מגבלת רוחב */
-            margin: 20px auto; /* מיקום במרכז העמוד */
-            text-align: center;
-        }</style>
-    <div style="font-size: 1.4rem; font-weight: 700; color: #343a40; text-align: center;">
-        <strong>לפרטים נוספים השאירי פרטים וקבלי כבר עכשיו <span class="underlined">10% הנחה</span>!</strong>
-        <br><strong>לרישום לקורס שנפתח בחודש הקרוב</strong>
-
-    </div>
-    
-<style>
-.underlined {
-position: relative;
-font-size:30px;
-margin-right: 1rem;
-z-index:1;
-}
-.underlined:after {
-content: "";
-position: absolute;
-bottom: -18px;
-left: 0;
-height: 18px;
-width: 100%;
-border: solid 7px #cb1829;
-border-color: #cb1829 transparent transparent transparent;
-border-radius: 40%;
-z-index:-1;
-}</style>
-    <form class="unique-form">
-        <div class="unique-form-row">
-            <input type="text" name="fullname" class="unique-form-input" placeholder="שם מלא" required>
-            <input type="email" name="email" class="unique-form-input" placeholder="אימייל" required>
-            <input type="tel" name="phone" class="unique-form-input" placeholder="טלפון" required>
-            <button type="submit" class="unique-form-button">שליחה</button>
-        </div>
-    </form>
-    </div>
-
-
-
-
-<br>
-
-
-    
-    <!-- הוספת האייקון כקובץ  -->
-<img src="./pic/hair-straightener-svgrepo-com.png" alt="Hair Straightener" width="100" height="100" class="straightener">
-    <div class="container text-center" style="background-color: rgba(255, 255, 255, 0.651); border-radius: 15px; padding: 20px;">
-        
-        <h2 class="section-title mb-4" style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #343a40; display: inline-block; position: relative; padding-bottom: 10px;">
-            הידע שלנו ההצלחה שלך!
-            <span class="line-animation" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, #343a40 0%, #f8f9fa 50%, #343a40 100%);"></span>
-        </h2>
-
-        <p style="font-size: 1.2rem; font-weight: 400; color: #020303; max-width: 800px; margin: 20px auto;">
-            מחפשת מקצוע חדש או הכנסה נוספת? הגעת למקום הנכון!
-            <br>הצטרפי לאקדמיה של חלקלי – החלקות שיער, והתחילי דרך חדשה ומרגשת! אנו מציעים לך את הכלים, הידע וההדרכה שתזדקקי להם כדי להצליח בעסק שלך ולהיות בעלת מקצוע עצמאית ומבוקשת.
-            <br>במהלך הלימודים תקבלי <b>רמה מקצועית גבוהה, יחס אישי וליווי צמוד</b>, כדי להבטיח לך את ההצלחה בכל צעד. אנחנו כאן כדי להנחות אותך ולהוביל אותך למקום שבו תוכלי להגשים את החלום ולבנות קריירה מצליחה בתחום החלקות השיער.
-        </p>
-
-
-
- <!-- גלריית וידאו Swiper -->
- <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <!-- סרטון 1 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/QOrdxbkGTGSjmUOD1WfD_458421666_3713460208908144_6622768056561484957_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 2 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/oVgH1HapTciNyVS9huSD_454254437_818307740443431_5245233936550413740_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 3 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      <!-- סרטון 4 -->
-      <div class="swiper-slide">
-        <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-</section>
-<style>
-/* ביטול אנימציות */
-.section-title,
-.line-animation {
-    animation: none;
-}
-
-/* ביטול keyframes */
-@keyframes fadeInText {}
-@keyframes expandLine {}
-
-/* עיצוב עבור טקסט */
-.custom-section {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.custom-text {
-    margin-bottom: 20px;
-}
-
-.custom-text p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* עיצוב הנחה */
-.discount {
-    color: #d9534f;
-    font-weight: bold;
-}
-
-/* טופס ייחודי */
-.unique-form {
-    display: flex;
-    justify-content: center;
-}
-
-.unique-form-row {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.unique-form-input {
-    flex: 1 1 180px; /* גודל קטן יותר עבור השדות */
-    padding: 8px 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    max-width: 200px; /* מצמצם את הרוחב המקסימלי */
-    transition: border-color 0.3s ease;
-}
-
-.unique-form-input:focus {
-    border-color: #ff7e5f;
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
-}
-
-.unique-form-button {
-    flex: 1 1 auto;
-    padding: 8px 16px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    max-width: 120px; /* גודל קטן יותר לכפתור */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.unique-form-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* התאמות למסכים קטנים */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px; /* צמצום רווחים במיכל */
-    }
-
-    .unique-form-row {
-        flex-wrap: wrap; /* במידת הצורך, יישבר לשורה נוספת */
-    }
-
-    .unique-form-input {
-        flex: 1 1 100%; /* כל שדה יתפוס את כל הרוחב */
-        max-width: none; /* מבטל את ההגבלה למסכים קטנים */
-    }
-
-    .unique-form-button {
-        max-width: 100%; /* הכפתור יתפוס את כל הרוחב */
-    }
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="py-5" style="background-color: #f4f4f9; border-radius: 15px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);">
-    <div class="card shadow-lg rounded border-0" style="background-color: #ffecd14c; width: 95%; max-width: 100%; margin: 0 auto;">
-        <div class="row no-gutters">
-            <div class="col-md-5 d-flex justify-content-center align-items-center">
-                <img src="../IMG-20241120-WA0033.jpg" class="card-img" alt="Hair Straightener" 
-                    style="object-fit: cover; width: 80%; height: 500px; border-radius: 10px; box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
-            </div>
-            <div class="col-md-7 d-flex flex-column justify-content-center p-4">
-                <h2 class="section-title mb-4 text-center" style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #343a40; font-size: 2.2rem; text-transform: uppercase; position: relative; padding-bottom: 12px;">
-                    למה לבחור בנו?
-                </h2>
-
-                <p class="con">
-                    <span class="strong"><b>מצוינות ללא פשרות</b></span> – אנו מאמינים שכל תלמיד יכול להפוך למומחה בזכות 
-                    <span class="sketch-underline"><b>כלים מתקדמים</b></span>, 
-                    טכנולוגיות חדשניות, ושיטות הוראה עדכניות שמותאמות למציאות המשתנה.
-                </p>
-
-                <p class="con">
-                    <span class="strong"><b>יחס אישי וליווי מלא</b></span> – המסע שלך מתחיל כאן ואנחנו איתך בכל שלב, 
-                    מהתחלה ועד להצלחה. תוכל ליהנות מלימוד פרטני, ליווי צמוד, ועזרה גם לאחר הקורס.
-                </p>
-
-                <p class="con">
-                    <span class="sketch-underline"><b>מה אנחנו מציעים?</b></span>
-                    <ul>
-                        <li>תכנים פרקטיים שמותאמים למציאות בשוק העבודה</li>
-                        <li>הדרכה ממורים מובילים בתחומם</li>
-                        <li>פרויקטים אמיתיים ותמיכה אישית עד להצלחה</li>
-                    </ul>
-                </p>
-
-                <p class="con">
-                    <span class="strong"><b>בואו להגשים את החלום שלכם</b></span> עם ההכשרה הטובה ביותר שתוביל אתכם לשיאי המקצועיות וההצלחה!
-                </p>
-
-                <div class="mt-4">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <style>
-            .p-subTitle {
-    background: linear-gradient(transparent 70%, yellow 30%);
-    display: inline;
-    margin-top: 40px;
-    padding-bottom: 0;
-    /*@include mq('sp') {
-        font-size: $size-subTitle-sp;
-        margin-top: 30px;
-    }*/
-}
-        .strong {
-            display: inline-block; /* Ensures proper layout */
-            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg');
-            background-repeat: no-repeat;
-            background-size: 100% 0.99rem; /* Width is full, height is 0.75rem */
-            background-position: 0 calc(100% + 0.3rem); /* Align background under the text */
-            padding-bottom:0 rem; /* Add spacing to make room for the underline */
-          }
-          
-          .sketch-underline {
-  position: relative;
-  font-size:20px;
-  margin-right: 1rem;
-  z-index:1;
-}
-.sketch-underline:after {
-  content: "";
-  position: absolute;
-  bottom: -18px;
-  left: 0;
-  height: 18px;
-  width: 100%;
-  border: solid 7px #d87a00;
-  border-color: #d87a00 transparent transparent transparent;
-  border-radius: 40%;
-  z-index:-1;
-}
-    
-
-
-
-
-/* רשימה מסוד/* פסקאות */
-p .con {
-    font-family: 'Assistant', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #6c757d;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    text-align: right; /* יישור טקסט לימין */
-    word-break: break-word; /* מונע חיתוך לא נכון של מילים */
-}
-
-/* רשימה מסודרת */
-p .con ul {
-    list-style-type: none;
-    padding-right: 0; /* אין רווח מיותר מצד ימין */
-    margin: 0;
-    text-align: right; /* יישור הרשימה לימין */
-    direction: rtl; /* מאפס את כיוון הטקסט כך שהבולטים והטקסט יהיו מימין לשמאל */
-}
-
-/* פריטי רשימה */
-p .con ul li {
-    padding-right: 2rem; /* הגדלנו את הרווח מצד ימין של כל פריט */
-    position: relative;
-    text-align: right; /* יישור הטקסט לימין גם ברשימה */
-    margin-bottom: 10px; /* הוספנו רווח קטן בין פריטי הרשימה */
-}
-
-/* סגנון לבולטים */
-p .con ul li:before {
-    content: "\2022"; /* הופך את הבולטים לחצים */
-    color: #d87a00;
-    font-size: 1.5rem;
-    position: absolute;
-    right: 0; /* מיקום הבולט מצד ימין */
-    top: 0;
-    margin-right: 0.5rem; /* מרחק קטן מהטקסט */
-}רת */
-p .con ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-/* פריטי רשימה */
-p .con ul li {
-    padding-left: 2rem; /* הגדלנו את הרווח מצד שמאל של כל פריט */
-    position: relative;
-    text-align: right; /* יישור הטקסט לימין גם ברשימה */
-    margin-bottom: 10px; /* הוספנו רווח קטן בין פריטי הרשימה */
-}
-
-/* סגנון לבולטים */
-p .con ul li:before {
-    content: "\2022"; /* הופך את הבולטים לחצים */
-    color: #d87a00;
-    font-size: 1.5rem;
-    position: absolute;
-    right: 100%; /* מיקום הבולט מצד ימין, מחוץ לטקסט */
-    top: 0;
-    margin-right: 0.5rem; /* מרחק קטן מהטקסט */
-}
-
-
-
-
-
-@media (max-width: 576px) {
-    p .con {
-        font-size: 1rem;
-        margin-bottom: 15px;
-    }
-
-    .sketch-underline:after {
-        bottom: -15px; /* מרחק נמוך גם במסכים קטנים */
-    }
-
-    /* התאמות נוספות עבור מסכים קטנים */
-    p .con ul li {
-        padding-right: 1.5rem;
-    }
-
-    /* התאמת התמונה בגודל קטן במסכים קטנים */
-    .card-img {
-        width: 100%; /* הופך את רוחב התמונה לאחוזים כך שתהיה מותאמת לרוחב הקונטיינר */
-        height: auto; /* שומר על יחס הגובה-רוחב */
-        max-height: 100px; /* מגביל את גובה התמונה לגובה מסוים */
-        max-height: 300px;
-    }
-}   
-         
-
-
-
-
-
-
-          </style>
 
 
 
@@ -3101,106 +1959,6 @@ const swiper = new Swiper('.swiper-container', {
 
 
 
-
-<!-- Curriculum Section -->
-<section class="py-5 bg-light sty">
-    <div class="container text-center">
-        <h2 class="section-title mb-4" data-aos="fade-right">תוכנית הקורס</h2>
-        <div class="row">
-            <!-- Item 1: אבחון והכרת סוגי השיער -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-users text-primary" style="font-size: 2rem;"></i> <!-- אייקון של משתמשים -->
-                        <h5 class="card-title text-primary">אבחון והכרת סוגי השיער</h5>
-                        <p class="card-text">הכרת סוגי השיער וניתוחם לעבודה מתאימה.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 2: חלוקה לאזורים -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-palette text-primary" style="font-size: 2rem;"></i> <!-- אייקון של פלטת צבעים -->
-                        <h5 class="card-title text-primary">חלוקה לאזורים</h5>
-                        <p class="card-text">טכניקות לחלוקת שיער לאזורים לעבודה יעילה.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 3: עבודה עם סוגי שיער שונים -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-cut text-primary" style="font-size: 2rem;"></i> <!-- אייקון של מספריים -->
-                        <h5 class="card-title text-primary">עבודה עם סוגי שיער שונים</h5>
-                        <p class="card-text">טיפול והתאמה של שיטות עבור סוגי שיער מגוונים.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 4: הכרת סוגי החומרים להחלקות -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-flask text-primary" style="font-size: 2rem;"></i> <!-- אייקון של מבחנה -->
-                        <h5 class="card-title text-primary">הכרת סוגי החומרים להחלקות</h5>
-                        <p class="card-text">מידע על החומרים השונים והתאמתם להחלקות שונות.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- New Item 1: אבחון והכרת החומרים לסוגי שיער שונים -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-flask text-primary" style="font-size: 2rem;"></i> <!-- אייקון של מבחנה -->
-                        <h5 class="card-title text-primary">אבחון והכרת החומרים לסוגי שיער שונים</h5>
-                        <p class="card-text">תיאום ציפיות והתמקדות עם מצבים שונים.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- New Item 2: תיאום ציפיות והתמקדות עם מצבים שונים -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-check-circle text-primary" style="font-size: 2rem;"></i> <!-- אייקון של סמל אישור -->
-                        <h5 class="card-title text-primary">תיאום ציפיות והתמקדות עם מצבים שונים</h5>
-                        <p class="card-text">הבנת הציפיות והמצבים השונים והכנה לעבודה בצורה מיטבית.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- New Item 3: שלבי עבודה וביצוע המחליק באופן יסודי -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="700">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-tools text-primary" style="font-size: 2rem;"></i> <!-- אייקון של כלים -->
-                        <h5 class="card-title text-primary">שלבי עבודה וביצוע המחליק באופן יסודי</h5>
-                        <p class="card-text">ביצוע כל שלב בהחלקה באופן יסודי לשמירה על איכות העבודה.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- New Item 4: הסוד שלנו לשימור ההחלקות לאחר החפיפה לתקופת זמן -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="800">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-shower text-primary" style="font-size: 2rem;"></i> <!-- אייקון של מקלחת -->
-                        <h5 class="card-title text-primary">הסוד שלנו לשימור ההחלקות לאחר החפיפה לתקופת זמן</h5>
-                        <p class="card-text">הטיפים שלנו לשימור ההחלקה לאחר חפיפה ומתי לעבור תחזוקה.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- New Item 5: תעודה לסיום הקורס -->
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="900">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <i class="fas fa-certificate text-primary" style="font-size: 2rem;"></i> <!-- אייקון של תעודה -->
-                        <h5 class="card-title text-primary">תעודה לסיום הקורס</h5>
-                        <p class="card-text">תעודה המוענקת למשתתפים בסיום הקורס להכרה בידע שרכשו.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p data-aos="fade-left" class="mt-4">הידע שלנו ההצלחה שלך!</p>
-    </div>
-</section>
 
 
 
