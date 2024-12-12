@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>האקדמיה של חלקלי - קורס החלקות שיער</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -121,7 +122,7 @@
         
         <div class="hero__text-content">
             <h3 class="hero__tagline">בלי ניסיון • בלי פחד • רק אהבה ליופי • וידיים שמוכנות ללמוד</h3>
-            <h1 class="hero__title">קורס החלקות השיער שלנו ייקח אותך צעד צעד להפוך את החלום למקצוע!  </h1>
+            <h2 class="hero__title">קורס החלקות השיער שלנו ייקח אותך צעד צעד להפוך את החלום למקצוע!  </h2>
             <p class="hero__description">בואי לגלות את הטכניקות המובילות , להתמקצע בתחום המבוקש, ולבנות קריירה זוהרת 
                 שתגרום לך להתאהב כל יום מחדש במה שאת עושה </p>
             <div class="hero__quote">TRANSFORM YOUR PASSION INTO EXPERTISE</div>
@@ -156,7 +157,7 @@
 .hero__overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0.171));
 }
 
 .hero__content {
@@ -275,18 +276,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<section class="halakli-hero">
+<!-- <section class="halakli-hero">
     <video autoplay muted loop playsinline class="background-video">
         <source src="./video/Halakli_Movie (3) (video-converter.com).mp4" type="video/mp4">
     </video>
@@ -589,7 +579,7 @@
 
 </style>
 
-
+ -->
 
 
 
@@ -627,20 +617,29 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-attachment: fixed;">
 
     
     <!-- הוספת האייקון כקובץ  -->
-<img src="./pic/hair-straightener-svgrepo-com.png" alt="Hair Straightener" width="100" height="100" class="straightener">
+
     <div class="container text-center" style="background-color: rgba(255, 255, 255, 0.651); border-radius: 15px; padding: 20px;">
         
-        <h2 class="section-title mb-4" style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #343a40; display: inline-block; position: relative; padding-bottom: 10px;">
-            הידע שלנו ההצלחה שלך!
-            <span class="line-animation" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, #343a40 0%, #f8f9fa 50%, #343a40 100%);"></span>
-        </h2>
 
-        <p style="font-size: 1.2rem; font-weight: 400; color: #020303; max-width: 800px; margin: 20px auto;">
-            מחפשת מקצוע חדש או הכנסה נוספת? הגעת למקום הנכון!
-            <br>הצטרפי לאקדמיה של חלקלי – החלקות שיער, והתחילי דרך חדשה ומרגשת! אנו מציעים לך את הכלים, הידע וההדרכה שתזדקקי להם כדי להצליח בעסק שלך ולהיות בעלת מקצוע עצמאית ומבוקשת.
-            <br>במהלך הלימודים תקבלי <b>רמה מקצועית גבוהה, יחס אישי וליווי צמוד</b>, כדי להבטיח לך את ההצלחה בכל צעד. אנחנו כאן כדי להנחות אותך ולהוביל אותך למקום שבו תוכלי להגשים את החלום ולבנות קריירה מצליחה בתחום החלקות השיער.
-        </p>
 
+        <div class="clean-course-intro">
+            <div class="intro-card">
+                <h2 class="title"> קורס החלקות מקצועי מבית חלקלי</h2>
+                <h3>קצת על הקורס -</h3>
+                <div class="meetings-info" style="font-size: 20px;">
+                    <span class="number">3</span>
+                    <span class="text">מפגשים + ליווי צמוד לאורך כל הדרך</span>
+                </div>
+        
+                <div class="outcome">
+                    שבהם תהפכי למחליקנית מקצועית!
+                </div>
+            </div>
+
+        
+
+
+        </div>
 
 
  <!-- גלריית וידאו Swiper -->
@@ -693,6 +692,180 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-attachment: fixed;">
     
   </div>
 
+
+
+
+
+
+  <div class="course-details-container">
+    <button class="details-trigger" onclick="toggleContent()">
+        <span class="trigger-text">פרטי הקורס המלאים</span>
+        <div class="trigger-icon">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </button>
+
+    <div class="details-content" id="courseContent">
+        <div class="meeting-card">
+            <div class="meeting-header">
+                <span class="meeting-number">01</span>
+                <h3>הידע שמאחורי השיער</h3>
+            </div>
+            <div class="meeting-body">
+                <p>במפגש הראשון נצלול לעולם המרתק של סוגי השיער והחלקות. נלמד את התיאוריה שמאחורי כל טכניקת החלקה, ונבין מהו הטיפול הנכון לכל סוג שיער. לאחר מכן, נתנסה באופן מעשי על בובה, שם נלמד את הטכניקות המדויקות של העבודה עם המחליק, מריחת חומר, חלוקת שיער והורדת השורות.</p>
+                <div class="duration"><i class="far fa-clock"></i> משך המפגש: 4 שעות</div>
+            </div>
+        </div>
+
+        <div class="meeting-card">
+            <div class="meeting-header">
+                <span class="meeting-number">02</span>
+                <h3>מהתחלה ועד הסוף</h3>
+            </div>
+            <div class="meeting-body">
+                <p>במפגש השני, ניקח את הידע התיאורטי צעד קדימה! נעמוד מול מודליסטית ונבצע החלקה מהשלב הראשון ועד התוצאה המושלמת. זהו הזמן שבו תיישמי את כל מה שלמדת ותתחילי לבנות את הביטחון שלך כמקצועית בתחום.</p>
+                <div class="duration"><i class="far fa-clock"></i> משך המפגש: 5-7 שעות</div>
+            </div>
+        </div>
+
+        <div class="meeting-card">
+            <div class="meeting-header">
+                <span class="meeting-number">03</span>
+                <h3>השתלמות מעשית במספרה</h3>
+            </div>
+            <div class="meeting-body">
+                <p>במפגש השלישי, נעמיק את הידע שלנו בעבודה פיזית במספרה. במהלך מפגש זה, ניישם את כל החומר שלמדנו ונקבל משוב ישיר על העבודה שלנו. זהו הזמן שלך להבריק, לגלות את הסגנון האישי שלך ולהתנסות בסביבה מקצועית ללא הגבלה של זמן.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.course-details-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.details-trigger {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.details-trigger:hover {
+    border-color: #cb1829;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.trigger-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.trigger-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.details-content {
+    display: none;
+    margin-top: 1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.meeting-card {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.meeting-card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.meeting-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.meeting-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #cb1829;
+    opacity: 0.8;
+}
+
+.meeting-header h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+}
+
+.meeting-body p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .details-trigger {
+        padding: 1rem;
+    }
+    
+    .trigger-text {
+        font-size: 1.1rem;
+    }
+    
+    .details-content {
+        padding: 1.5rem;
+    }
+}
+</style>
+<script>
+function toggleContent() {
+    const content = document.getElementById('courseContent');
+    const icon = document.querySelector('.trigger-icon i');
+    
+    if (content.style.display === 'none' || !content.style.display) {
+        content.style.display = 'block';
+        icon.style.transform = 'rotate(180deg)';
+    } else {
+        content.style.display = 'none';
+        icon.style.transform = 'rotate(0)';
+    }
+}
+</script>
 
 
     </div>
@@ -865,10 +1038,81 @@ z-index:-1;
     }
 }
 </style>
- 
+
+ <!--video-->
+  <style>.swiper-container {
+    width: 70%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* מונע overflow */
+  }
   
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
   
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* רוחב מלא */
+    height: 100%; /* גובה מלא */
+    padding: 5px; /* מרווח בין הסרטונים */
+  }
   
+  .video-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-card video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* חיתוך תוכן וידאו */
+    border-radius: 10px; /* עיגול פינות הוידאו */
+  }
+  
+  .swiper-container {
+    position: relative;
+  }</style>
+  <!-- JavaScript להפעלת Swiper -->  <!--video-->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerView: 3, // מספר הסרטונים המוצגים במקביל למסכים גדולים
+      spaceBetween: 5, // מרווח בין הסרטונים
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    
+    
+      breakpoints: {
+        // התאמה למסכים גדולים יותר
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        // התאמה למסכים בינוניים
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        // התאמה למסכים קטנים
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+      },
+    });
+    </script>
   
   
 
@@ -1762,186 +2006,6 @@ p .con ul li:before {
 
 
 
-
-<!-- CSS לעיצוב -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-<section class="course-details">
-
-<!-- הוספת האייקון כקובץ  -->
-<img src="./pic/hair-straightener-svgrepo-com.png" alt="Hair Straightener" width="100" height="100" class="straightener">
-<script src="./JS/Straightener-Icon.js"></script>
-
-
-    <div class="container text-center">
-      <h2 class="section-title mb-4">תוכנית הקורס</h2>
-  
-      <!-- גלריית וידאו Swiper -->
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <!-- סרטון 1 -->
-          <div class="swiper-slide">
-            <div class="video-card">
-              <video autoplay loop muted playsinline>
-                <source
-                  src="https://vid.cdn-website.com/83ba53f7/videos/QOrdxbkGTGSjmUOD1WfD_458421666_3713460208908144_6622768056561484957_n-v.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <!-- סרטון 2 -->
-          <div class="swiper-slide">
-            <div class="video-card">
-              <video autoplay loop muted playsinline>
-                <source
-                  src="https://vid.cdn-website.com/83ba53f7/videos/oVgH1HapTciNyVS9huSD_454254437_818307740443431_5245233936550413740_n-v.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <!-- סרטון 3 -->
-          <div class="swiper-slide">
-            <div class="video-card">
-              <video autoplay loop muted playsinline>
-                <source
-                  src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-          <!-- סרטון 4 -->
-          <div class="swiper-slide">
-            <div class="video-card">
-              <video autoplay loop muted playsinline>
-                <source
-                  src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  
-
-<!-- JavaScript להפעלת Swiper -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script>
-const swiper = new Swiper('.swiper-container', {
-  loop: true,
-  slidesPerView: 3, // מספר הסרטונים המוצגים במקביל למסכים גדולים
-  spaceBetween: 5, // מרווח בין הסרטונים
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-
-
-  breakpoints: {
-    // התאמה למסכים גדולים יותר
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    // התאמה למסכים בינוניים
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    // התאמה למסכים קטנים
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 5,
-    },
-  },
-});
-</script>
-
-<!-- עיצוב -->
-<style>
-.course-details {
-  padding: 20px 0;
-  background-color: #e6fcf7;
-  position: relative;
-  overflow: hidden; /* להסתיר את החלקים שמתפרצים */
-}
-
-
-
-@media (max-width: 768px) {
-  .course-details::before {
-    /* שמירה על אותו העיצוב גם במכשירים קטנים */
-    top: -100px; /* מיקום הגל נשאר אותו דבר */
-    height: 500px; /* הגל נשאר באותו גובה */
-  }
-}
-
-@media (max-width: 480px) {
-  .course-details::before {
-    /* שמירה על אותו העיצוב גם במכשירים קטנים מאוד */
-    top: -200px; /* מיקום הגל נשאר אותו דבר */
-    height: 500px; /* הגל נשאר באותו גובה */
-  }
-}
-
-
-
-.section-title {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.swiper-container {
-  width: 70%;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden; /* מונע overflow */
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* רוחב מלא */
-  height: 100%; /* גובה מלא */
-  padding: 5px; /* מרווח בין הסרטונים */
-}
-
-.video-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: 100%;
-}
-
-.video-card video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover; /* חיתוך תוכן וידאו */
-  border-radius: 10px; /* עיגול פינות הוידאו */
-}
-
-.swiper-container {
-  position: relative;
-}
-
-
-</style>
 
 
 
