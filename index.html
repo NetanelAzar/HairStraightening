@@ -1166,6 +1166,9 @@ z-index:-1;
                    
                 </div>
                 <div class="accordion accordion-flush" id="faqAccordion">
+
+
+                    
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="faq1">
                             <button
@@ -1273,6 +1276,9 @@ z-index:-1;
                         
                         </div>
                     </div>
+
+
+
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="faq2">
@@ -1422,6 +1428,137 @@ z-index:-1;
                             </div>
                         </div>
                     </div>
+
+
+                           <!--החזרת השקעה-->             
+                    <div class="accordion-item pricing-faq">
+                        <h2 class="accordion-header" id="faq8">
+                            <button class="accordion-button collapsed faq-question"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapse8"
+                                    aria-expanded="false"
+                                    aria-controls="collapse8">
+                                תוך כמה זמן את מחזירה את ההשקעה?
+                            </button>
+                        </h2>
+                        <div id="collapse8" 
+                             class="accordion-collapse collapse" 
+                             aria-labelledby="faq8"
+                             data-bs-parent="#faqAccordion">
+                            <div class="accordion-body pricing-breakdown">
+                                <div class="pricing-info">
+                                    <h3>מחיר ממוצע להחלקת שיער:</h3>
+                                    <p class="price-range">700₪ - 2,000₪</p>
+                                </div>
+                                
+                                <div class="calculation-example">
+                                    <h4>דוגמא לחישוב הכנסה חודשית:</h4>
+                                    <ul class="calculation-steps">
+                                        <li>מחיר מינימום להחלקה: <strong>700₪</strong></li>
+                                        <li>3 החלקות בשבוע = <strong>2,100₪</strong></li>
+                                        <li>4 שבועות בחודש = <strong>8,400₪</strong></li>
+                                    </ul>
+                                    <div class="calculation-note">
+                                        * החישוב מבוסס על המחיר המינימלי בשוק
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                    .pricing-faq .accordion-button {
+                        font-family: 'Assistant', sans-serif;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: #2c3e50;
+                        padding: 1.5rem;
+                    }
+                    
+                    .pricing-breakdown {
+                        font-family: 'Assistant', sans-serif;
+                        padding: 2rem;
+                        background: linear-gradient(to right, #f8f9fa, #ffffff);
+                    }
+                    
+                    .pricing-info {
+                        margin-bottom: 1.5rem;
+                        text-align: center;
+                    }
+                    
+                    .pricing-info h3 {
+                        color: #2c3e50;
+                        font-size: 1.3rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    
+                    .price-range {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        color: #e74c3c;
+                        margin: 1rem 0;
+                    }
+                    
+                    .calculation-example {
+                        background: white;
+                        padding: 1.5rem;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                    }
+                    
+                    .calculation-example h4 {
+                        color: #34495e;
+                        font-size: 1.1rem;
+                        margin-bottom: 1rem;
+                        border-bottom: 2px solid #eee;
+                        padding-bottom: 0.5rem;
+                    }
+                    
+                    .calculation-steps {
+                        list-style: none;
+                        padding: 0;
+                    }
+                    
+                    .calculation-steps li {
+                        margin: 0.8rem 0;
+                        font-size: 1.1rem;
+                        color: #555;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    
+                    .calculation-steps strong {
+                        color: #27ae60;
+                        font-size: 1.2rem;
+                    }
+                    
+                    .calculation-note {
+                        margin-top: 1rem;
+                        font-size: 0.9rem;
+                        color: #7f8c8d;
+                        text-align: center;
+                        font-style: italic;
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .pricing-breakdown {
+                            padding: 1rem;
+                        }
+                        
+                        .price-range {
+                            font-size: 1.5rem;
+                        }
+                        
+                        .calculation-steps li {
+                            font-size: 1rem;
+                        }
+                    }
+                    </style>
+                    
+
+
+
                     
                 </div>
             </div>
