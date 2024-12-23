@@ -83,10 +83,6 @@
             </nav>
         </div>
     </header>
-    
-
-    
-
 <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -116,20 +112,29 @@
     <div class="hero__overlay"></div>
     
     <div class="hero__content">
-        <div class="hero__logo">
-            <img src="./pic/halak-li-logo-e1674065747680.png" alt="HALAKLI">
+        <div class="hero__side">
+            <div class="hero__decoration">
+                <div class="decoration__circle"></div>
+                <div class="decoration__line"></div>
+                <div class="decoration__dots"></div>
+            </div>
         </div>
         
-        <div class="hero__text-content">
-            <h3 class="hero__tagline">בלי ניסיון • בלי פחד • רק אהבה ליופי • וידיים שמוכנות ללמוד</h3>
-            <h2 class="hero__title">קורס החלקות השיער שלנו ייקח אותך צעד צעד להפוך את החלום למקצוע!  </h2>
-            <p class="hero__description">בואי לגלות את הטכניקות המובילות , להתמקצע בתחום המבוקש, ולבנות קריירה זוהרת 
-                שתגרום לך להתאהב כל יום מחדש במה שאת עושה </p>
-            <div class="hero__quote">TRANSFORM YOUR PASSION INTO EXPERTISE</div>
+        <div class="hero__main">
+            <div class="hero__logo">
+                <img src="./pic/halak-li-logo-e1674065747680.png" alt="HALAKLI">
+            </div>
+            
+            <div class="hero__text-content">
+                <h3 class="hero__tagline">בלי ניסיון • בלי פחד • רק אהבה ליופי • וידיים שמוכנות ללמוד</h3>
+                <h2 class="hero__title">קורס החלקות השיער שלנו ייקח אותך צעד צעד להפוך את החלום למקצוע!</h2>
+                <p class="hero__description">בואי לגלות את הטכניקות המובילות , להתמקצע בתחום המבוקש, ולבנות קריירה זוהרת 
+                    שתגרום לך להתאהב כל יום מחדש במה שאת עושה</p>
+                <div class="hero__quote">TRANSFORM YOUR PASSION INTO EXPERTISE</div>
+            </div>
         </div>
     </div>
 </section>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600&display=swap');
 
@@ -269,345 +274,17 @@
 
 
 
-
-
-
-
-
-
-
-<!-- <section class="halakli-hero">
-    <video autoplay muted loop playsinline class="background-video">
-        <source src="./video/Halakli_Movie (3) (video-converter.com).mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    
-    <div class="container">
-        <div class="hero-content-centered">
-            <div class="brand-logo">
-                <img src="./pic/halak-li-logo-e1674065747680.png" alt="HALAKLI">
-                <div class="hebrew-text-small">בלי ניסיון • בלי פחד • רק אהבה ליופי • וידיים שמוכנות ללמוד</div>
-            </div>
-            
-            <div class="content-wrapper">
-                <div class="hebrew-section">
-                    <p class="hebrew-main-text">קורס החלקות השיער שלנו ייקח אותך צעד צעד להפוך את החלום למקצוע!</p>
-                    <p class="hebrew-sub-text">בואי לגלות את הטכניקות המובילות, להתמקצע בתחום המבוקש, ולבנות קריירה זוהרת שתגרום לך להתאהב כל יום מחדש במה שאת עושה.</p>
-                </div>
-                <div class="english-section">
-                    <div class="decorative-border">
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
-                        <div class="quote">
-                            <div class="quote-text first">TRANSFORM YOUR PASSION</div>
-                            <div class="quote-text second">INTO EXPERTISE</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Montserrat:wght@200;300;400&display=swap');
-
-    .halakli-hero {
-        position: relative;
-        height: 100vh;
-        background: #000;
-        overflow: hidden;
-    }
-    
-    .background-video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.6;
-    }
-    
-    .hero-overlay {
-        position: absolute;
-        inset: 0;
-    }
-    
-    .hero-content-centered {
-        position: relative;
-        z-index: 3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        gap: 1.5rem;
-    }
-    
-    .brand-logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .brand-logo img {
-        width: 400px;
-        filter: drop-shadow(0 15px 40px rgba(0,0,0,0.5));
-        animation: floatLogo 5s ease-in-out infinite 1s;
-    }
-    
-    .hebrew-text-small {
-        font-family: 'Rubik', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 300;
-        color: #fff;
-        margin-top: 1rem;
-        text-align: center;
-        animation: fadeInUp 1.5s ease-out 0.3s;
-    }
-    
-    .content-wrapper {
-        text-align: center;
-        padding: 2.5rem;
-    }
-    
-    .hebrew-section {
-        font-family: 'Rubik', sans-serif;
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 1.5rem;
-        position: relative;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
-        transform: translateX(-100%);
-        opacity: 0;
-        animation: slideInContent 1s forwards 0.5s;
-    }
-    
-    .decorative-border {
-        position: relative;
-        padding: 2rem;
-    }
-    
-    .corner {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border: 1.5px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .top-left {
-        top: 0;
-        left: 0;
-        border-right: none;
-        border-bottom: none;
-    }
-    
-    .top-right {
-        top: 0;
-        right: 0;
-        border-left: none;
-        border-bottom: none;
-    }
-    
-    .bottom-left {
-        bottom: 0;
-        left: 0;
-        border-right: none;
-        border-top: none;
-    }
-    
-    .bottom-right {
-        bottom: 0;
-        right: 0;
-        border-left: none;
-        border-top: none;
-    }
-    
-    .quote-text {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.9rem;
-        font-weight: 200;
-        letter-spacing: 8px;
-        line-height: 1.5;
-        background: linear-gradient(135deg, #ffffff, #d0d0d0);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
-    }
-    
-    .quote-text.first {
-        animation: slideInLeft 1.5s ease-out 1s;
-    }
-    
-    .quote-text.second {
-        animation: slideInRight 1.5s ease-out 1.5s;
-    }
-    
-    @keyframes floatLogo {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes slideInLeft {
-        from { opacity: 0; transform: translateX(-50px); }
-        to { opacity: 1; transform: translateX(0); }
-    }
-    
-    @keyframes slideInRight {
-        from { opacity: 0; transform: translateX(50px); }
-        to { opacity: 1; transform: translateX(0); }
-    }
-    
-    @keyframes slideInContent {
-        from { transform: translateX(-100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @media (max-width: 768px) {
-        .brand-logo img {
-            width: 250px;
-        }
-    
-        .hebrew-text-small {
-            font-size: 1.2rem;
-        }
-    
-        .content-wrapper {
-            padding: 1.5rem;
-        }
-    
-        .quote-text {
-            font-size: 1.2rem;
-            letter-spacing: 5px;
-        }
-    
-        .corner {
-            width: 15px;
-            height: 15px;
-        }
-    }
-    </style>
-
-<style>
-.content-wrapper {
-    position: relative;
-    padding: 2rem;
-}
-
-.hebrew-section {
-    font-family: 'Rubik', sans-serif;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2.5rem;
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
-}
-
-.hebrew-main-text {
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    position: relative;
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid #d4af37;
-    padding-bottom: 1.5rem;
-    display: inline-block;
-}
-
-.hebrew-sub-text {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 85%;
-    margin: 0 auto;
-    position: relative;
-}
-
-.hebrew-section::before,
-.hebrew-section::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #d4af37;
-}
-
-.hebrew-section::before {
-    top: 15px;
-    right: 15px;
-    border-left: none;
-    border-bottom: none;
-}
-
-.hebrew-section::after {
-    bottom: 15px;
-    left: 15px;
-    border-right: none;
-    border-top: none;
-}
-
-@media (max-width: 768px) {
-    .hebrew-section {
-        padding: 1.5rem;
-    }
-    
-    .hebrew-main-text {
-        font-size: 1.5rem;
-        padding-bottom: 1rem;
-    }
-    
-    .hebrew-sub-text {
-        font-size: 1.1rem;
-        max-width: 95%;
-    }
-}
-
-
-</style>
-
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
 <!-- 2 -->
 <!--TEXT-->
-<section class="py-5" style="    background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.6) 100%);
-backdrop-filter: blur(5px);
-border-radius: 15px;
-padding: 20px;
-background-image: linear-gradient(30deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6),
-linear-gradient(150deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6),
-linear-gradient(30deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6),
-linear-gradient(150deg, #f6f6f6 12%, transparent 12.5%, transparent 87%, #f6f6f6 87.5%, #f6f6f6);
-background-size: 80px 140px;
-background-position: 0 0, 0 0, 40px 70px, 40px 70px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-attachment: fixed;">
+<section class="py-5" style="
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-attachment: fixed;">
+
 
 
 
@@ -623,55 +300,127 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-attachment: fixed;">
 
 
 
- <!-- גלריית וידאו Swiper -->
- <div class="swiper-container">
+<!-- גלריית וידאו Swiper -->
+<div class="swiper-container">
     <div class="swiper-wrapper">
       <!-- סרטון 1 -->
       <div class="swiper-slide">
         <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="./video/Video with a client.mp4"
-              type="video/mp4"
-            />
+          <video autoplay loop muted playsinline onclick="openVideoPlayer('./video/Video with a client.mp4')">
+            <source src="./video/Video with a client.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
       <!-- סרטון 2 -->
       <div class="swiper-slide">
         <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="../video-output-92A142B6-3FC8-4C65-BC07-3A7E2DA3F05D.mov"
-            />
+          <video autoplay loop muted playsinline onclick="openVideoPlayer('../video-output-92A142B6-3FC8-4C65-BC07-3A7E2DA3F05D.mov')">
+            <source src="../video-output-92A142B6-3FC8-4C65-BC07-3A7E2DA3F05D.mov" />
           </video>
         </div>
       </div>
       <!-- סרטון 3 -->
       <div class="swiper-slide">
         <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="../video-output-572167B3-0412-441D-88B1-F632EABA9C4C.mov"
-              type="video/mp4"
-            />
+          <video autoplay loop muted playsinline onclick="openVideoPlayer('../video-output-572167B3-0412-441D-88B1-F632EABA9C4C.mov')">
+            <source src="../video-output-572167B3-0412-441D-88B1-F632EABA9C4C.mov" type="video/mp4" />
           </video>
         </div>
       </div>
       <!-- סרטון 4 -->
       <div class="swiper-slide">
         <div class="video-card">
-          <video autoplay loop muted playsinline>
-            <source
-              src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4"
-              type="video/mp4"
-            />
+          <video autoplay loop muted playsinline onclick="openVideoPlayer('https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4')">
+            <source src="https://vid.cdn-website.com/83ba53f7/videos/L6zCOnfeTouTli93oRSE_452979985_2029410830794249_6697566374468942488_n-v.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
     </div>
-    
   </div>
+ <!--video-->
+  <style>
+    .swiper-container {
+      width: 70%;
+      max-width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5px;
+    }
+  
+    .video-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: 100%;
+    }
+  
+    .video-card video {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <!-- JavaScript להפעלת Swiper ופתיחת נגן וידאו -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper-container", {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 5,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+      },
+    });
+  
+    function openVideoPlayer(videoSrc) {
+      // יצירת חלון חדש עם נגן וידאו
+      const videoWindow = window.open('', '_blank', 'width=800,height=600');
+      videoWindow.document.write(`
+        <html>
+          <head><title>וידאו</title></head>
+          <body style="margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #000;">
+            <video controls autoplay style="max-width: 100%; max-height: 100%; background: #000;">
+              <source src="${videoSrc}" type="video/mp4" />
+            </video>
+          </body>
+        </html>
+      `);
+      videoWindow.document.close();
+    }
+  </script>
+  
 
 
 
@@ -1035,82 +784,28 @@ z-index:-1;
 }
 </style>
 
- <!--video-->
-  <style>.swiper-container {
-    width: 70%;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden; /* מונע overflow */
-  }
-  
-  .swiper-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* רוחב מלא */
-    height: 100%; /* גובה מלא */
-    padding: 5px; /* מרווח בין הסרטונים */
-  }
-  
-  .video-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: 100%;
-  }
-  
-  .video-card video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover; /* חיתוך תוכן וידאו */
-    border-radius: 10px; /* עיגול פינות הוידאו */
-  }
-  
-  .swiper-container {
-    position: relative;
-  }</style>
-  <!-- JavaScript להפעלת Swiper -->  <!--video-->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      slidesPerView: 3, // מספר הסרטונים המוצגים במקביל למסכים גדולים
-      spaceBetween: 5, // מרווח בין הסרטונים
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-    
-    
-      breakpoints: {
-        // התאמה למסכים גדולים יותר
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        // התאמה למסכים בינוניים
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        // התאמה למסכים קטנים
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 0,
-        },
-      },
-    });
-    </script>
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2226,7 +1921,7 @@ p .con ul li:before {
 
 
 
-<!-- Registration Form Section -->
+<!-- Footer Registration Form and map Section -->
 <footer class="halakli-footer">
     <div class="halakli-container">
         <div class="halakli-header">

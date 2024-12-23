@@ -1,12 +1,222 @@
-        /* Footer */
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        .footer a {
-            color: #ff6f61;
-            text-decoration: none;
-        }
+.halakli-footer {
+    background: linear-gradient(to bottom, #1a1a1a, #000);
+    padding: 60px 0 30px;
+    color: #fff;
+    direction: rtl;
+  }
+  
+  .halakli-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .halakli-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .halakli-logo {
+    height: 60px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+  }
+  
+  .halakli-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .halakli-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .halakli-col {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .halakli-col h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .halakli-col h4::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #d87a00, #ffa726);
+    transition: width 0.3s ease;
+  }
+  
+  .halakli-col h4:hover::after {
+    width: 100%;
+  }
+  
+  .halakli-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .halakli-col ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .halakli-col ul li a:hover {
+    color: #fff;
+    transform: translateX(-8px);
+    padding-right: 10px;
+  }
+  
+  .halakli-form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .halakli-form-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .halakli-form-group label {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #666;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .halakli-form-group input:focus ~ label,
+  .halakli-form-group input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #d87a00;
+  }
+  
+  .halakli-form-group input:focus {
+    border-bottom-color: #d87a00;
+    box-shadow: 0 1px 0 0 #d87a00;
+  }
+  
+  .halakli-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #d87a00, #ffa726);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .halakli-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(216, 122, 0, 0.3);
+  }
+  
+  .halakli-map {
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .halakli-map:hover {
+    transform: translateY(-5px);
+  }
+  
+  .halakli-address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .halakli-address:hover {
+    color: #fff;
+  }
+  
+  .halakli-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .halakli-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .halakli-social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .halakli-social a:hover {
+    background: #d87a00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(216, 122, 0, 0.3);
+  }
+  
+  .halakli-copyright {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 991px) {
+    .halakli-row {
+        flex-wrap: wrap;
+    }
+    
+    .halakli-col {
+        width: calc(50% - 20px);
+        margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 574px) {
+    .halakli-col {
+        width: 100%;
+    }
+  }
+  
